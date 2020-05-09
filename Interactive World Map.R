@@ -26,3 +26,5 @@ life.exp.map <- left_join(life.exp, world_map, by = "CODE")
 fig <- plot_ly(life.exp.map, type='choropleth', locations=life.exp.map$CODE, z=life.exp.map$value, text=life.exp.map$COUNTRY, colorscale='Rainbow',
                reversescale =F)
 fig
+
+#working version
