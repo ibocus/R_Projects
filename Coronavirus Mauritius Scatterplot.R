@@ -18,10 +18,10 @@ df <- filter(df,location == 'Mauritius')  # filter only mauritius
 df<-as.data.frame(df)
 
 df <- ggplot(df, aes(x=date, y=total_cases)) +
-  geom_point(aes(shape=location, color=new_cases), size=8, alpha=0.7) +
+  geom_point(aes(color=new_cases), size=8, alpha=0.7) +
   labs(title='COVID19 in Mauritius as at 09/05/2020 for Total cases vs New Cases',y = "Total Cases", x = "Date")+
   scale_color_continuous(trans = 'reverse')+ # reversing the legend label
-  theme_stata()+
+  theme_bw()+
   scale_fill_manual(values=c('green','red')) #manually filling the color
 
 print(df)
